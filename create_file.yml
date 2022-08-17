@@ -1,0 +1,9 @@
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Creating a file with content
+      copy:
+        dest: "/var/tmp/ansible.txt"
+        content: |
+          line 01
+          line 02
