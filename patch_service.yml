@@ -8,7 +8,7 @@
     - name: Upgrade package
       package:
         name: "{{ package }}"
-        state: present
+        state: latest
     - name: Remove useless packages from the cache
       apt:
         autoclean: yes
