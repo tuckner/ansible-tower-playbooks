@@ -2,6 +2,9 @@
   hosts: all
   become: true
   tasks:
+    - name: Echo package
+      debug:
+        msg: "{{ package }}"
     - name: Upgrade package
       package:
         name: "{{ package }}"
