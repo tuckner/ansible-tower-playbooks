@@ -1,0 +1,8 @@
+- name: Remove a user
+  hosts: all
+  become: true
+  tasks:
+  - name: "Remove user accounts"
+    user:
+      name: "{{ username }}"
+      state: absent
