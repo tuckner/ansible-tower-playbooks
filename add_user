@@ -1,0 +1,11 @@
+- name: Add a user
+  hosts: all
+  become: true
+  tasks:
+  - name: "Create user accounts"
+    user:
+      name: "{{ username }}"
+  - name: "Add authorized keys"
+    authorized_key:
+      user: "{{ username }}"
+      key: "{{ ssh_key }}"
